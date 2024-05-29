@@ -6,6 +6,7 @@ import ru.shop.exception.EntityNotFoundException;
 import ru.shop.model.Customer;
 import ru.shop.repository.CustomerRepository;
 
+
 import java.util.Optional;
 import java.util.UUID;
 
@@ -17,6 +18,7 @@ class CustomerServiceTest {
 
     private final CustomerRepository repository = Mockito.mock();
     private final CustomerService customerService = new CustomerService(repository);
+
 
     @Test
     public void shouldGetCustomer() {
@@ -31,10 +33,13 @@ class CustomerServiceTest {
         // then
         assertThat(customer).isEqualTo(mockedCustomer);
     }
+
     @Test
     public void shouldThrowWhenCustomerNotFound() {
         // then
 
         assertThatThrownBy(() -> customerService.getById(UUID.randomUUID())).isInstanceOf(EntityNotFoundException.class);
     }
+
 }
+

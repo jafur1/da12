@@ -16,15 +16,15 @@ import java.util.UUID;
 public class ProductService {
 
     private final ProductRepository repository;
-
+    //есть тест
     public void save(Product product) {
         repository.save(product);
     }
-
+    //ну вроде есть
     public List<Product> findAll() {
         return repository.findAll();
     }
-
+    //есть тест
     public List<Product> findByProductType(ProductType productType) {
         List<Product> result = new ArrayList<>();
         for (Product product : repository.findAll()) {

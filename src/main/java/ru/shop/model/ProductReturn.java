@@ -21,4 +21,5 @@ public class ProductReturn {
     UUID orderId;
     LocalDate date;
     long quantity;
+
 }

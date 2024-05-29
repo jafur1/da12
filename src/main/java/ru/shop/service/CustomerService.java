@@ -26,4 +26,6 @@ public class CustomerService {
     public Customer getById(UUID id) {
         return repository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
+
+
 }
